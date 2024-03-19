@@ -1,20 +1,56 @@
 body{
-    background-color: #081b29;
+    background-color: #0b1923;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    color: #ededed;
 }
-.box{
+.box-header{
     width: 100%;
     height: 12vh;
-    background-color: black;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 header a{
     color: #ededed;
+    text-decoration: none;
+}
+header a:hover, header a.coloured{
+    transition: .3s;
+    color: #33a0ee;
 }
 .items{
     display: flex;
+    font-size: 2.5vh;
 }
 .item{
     margin: 5vh;
+}
+.logo{
+    font-size: 3.5vh;
+    font-weight: 800;
+}
+.box{
+    display: flex;
+    padding: 10%;
+}
+.left{
+    width: 50%;
+    flex-direction: column;
+}
+.right{
+    width: 50%;
+}
+.right .titles{
+    font-size: 2.5vh;
+}
+.right .buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+.right .buttons a{
+    color: #ededed;
+    text-decoration: none;
+    border-color: 1px solid #ededed;
 }
