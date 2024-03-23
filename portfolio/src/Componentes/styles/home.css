@@ -1,8 +1,16 @@
 body{
-    background-color: #0b1923;
-    font-family: "Nunito", sans-serif;
-    font-weight: 600;
-    color: #ededed;
+    background-color: #1f242d;
+    font-family: "Albert Sans", sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+html{
+    scroll-behavior: smooth;
+}
+.sticky{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 .box-header{
     width: 100%;
@@ -11,13 +19,21 @@ body{
     justify-content: space-around;
     align-items: center;
 }
-header a{
-    color: #ededed;
-    text-decoration: none;
+header{
+    background-color: #1f242d;
 }
-header a:hover, header a.coloured{
+header a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0;
+}
+
+header a {
+    animation: slideTop 2s ease forwards;
+}
+header a:hover{
     transition: .3s;
-    color: #33a0ee;
+    color: #00e2ff;
 }
 .items{
     display: flex;
@@ -26,31 +42,246 @@ header a:hover, header a.coloured{
 .item{
     margin: 5vh;
 }
-.logo{
-    font-size: 3.5vh;
-    font-weight: 800;
-}
 .box{
     display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10%;
 }
 .left{
     width: 50%;
     flex-direction: column;
+    margin-left: 10vh;
+    margin-top: 10vh;
+    animation: zoomIn .5s ease forwards;
+    animation-delay: .5s;
+    opacity: 0;
 }
 .right{
     width: 50%;
+    margin-right: 10vh;
+    margin-top: 10vh;
 }
 .right .titles{
     font-size: 2.5vh;
+}
+.right .titles .rol{
+    font-size: 5vh;
+    color: #00e2ff;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .3s;
+    opacity: 0;
+}
+.right .titles .name{
+    font-size: 4vh;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .3s;
+    opacity: 0;
+}
+.right .titles .desc{
+    animation: slideRight 1s ease forwards;
+    animation-delay: .3s;
+    opacity: 0;
+    margin-bottom: 5.5vh;
 }
 .right .buttons{
     display: flex;
     justify-content: space-evenly;
     margin-top: 5%;
+    font-size: 2.5vh;
 }
-.right .buttons a{
-    color: #ededed;
+.right .buttons button{
+    font-family: "Albert Sans", sans-serif;
+    width: 20vh;
+    font-size: 2.5vh;
+    font-weight: 600;
+    height: 7vh;
+    color: #1f242d;
     text-decoration: none;
-    border-color: 1px solid #ededed;
+    background-color: #00e2ff;
+    box-shadow: 0 0 1.5vh #00e2ff;
+    border: none;
+    border-radius: 10vh;
+}
+.right .buttons button:hover{
+    transition: .3s;
+    background-color: #1f242d;
+    color: #00e2ff;
+    border: .4vh solid #00e2ff;
+    box-shadow: 0 0 0;
+}
+.right .buttons .button-one{
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .3s;
+    opacity: 0;
+}
+.right .buttons .button-two{
+    animation: slideTop 1s ease forwards;
+    animation-delay: .3s;
+    opacity: 0;
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(+100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom {
+    0% {
+        transform: translateY(+100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.proyecto{
+    width: 100%;
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+}
+.box-proyect{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+}
+.mini-header, .modi-left{
+    width: 55%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 10vh;
+}
+.mini-proyect{
+    font-size: 2.25vh;
+    font-weight: 500;
+    margin-bottom: 2.25vh;
+    margin-top: 2.25vh;
+    color: #00e2ff;
+}
+.big-proyect{
+    font-size: 3.5vh;
+    margin-bottom: 2.25vh;
+}
+.mini-items{
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(84, 84, 84);
+    border-radius: 5vh;
+    box-shadow: 0 0.2rem 0.2rem rgb(16, 16, 16);
+}
+.mini-items a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 2.25vh;
+}
+.mini-items a:hover{
+    transition: .2s;
+    color: #00e2ff;
+}
+.modi-right{
+    width: 50%;
+    margin-left: 5%;
+}
+.ort-right{
+    width: 50%;
+    margin-right: 5%;
+}
+.modi-box{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    font-size: 2.25vh;
+    margin-bottom: 10vh;
+}
+.modi-links{
+    width: 50%;
+    display: flex;
+    margin-top: 3.5vh;
+}
+.modi-links .github, .modi-links .vercel, .modi-links .github-ort{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 13vh;
+    font-size: 2vh;
+    font-weight: 400;
+    height: 6vh;
+    text-decoration: none;
+    background-color: rgb(84, 84, 84);
+    box-shadow: 0 0.1rem 0.1rem rgb(16, 16, 16);
+    border: none;
+    border-radius: 2vh;
+}
+.modi-links button{
+    font-family: "Albert Sans", sans-serif;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+.modi-links .github:hover, .modi-links .vercel:hover, .modi-links .github-ort:hover{
+    transition: .3s;
+    scale: 1.125;
+}
+.github{
+    margin-left: 2vh;
+}
+.modi-png {
+    width: 100%;
+    height: 100%;
+    border-radius: 3vh;
+    background-size: cover;
+    object-fit: cover;
+    background-image: url("/public/Modi.png"); 
+}
+.ort-right .ort-png{
+    width: 100%;
+    height: 100%;
+    border-radius: 3vh;
+    background-size: cover;
+    object-fit: cover;
+    background-image: url("/public/ort.PNG"); 
 }
