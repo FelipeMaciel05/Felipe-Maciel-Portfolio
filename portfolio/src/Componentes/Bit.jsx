@@ -3,7 +3,7 @@ function Bit(){
         <div className="modi">
                             <div className="modi-box">
                                 <div className="modi-left">
-                                    <label className="mini-proyect">DEVELOPER</label>
+                                    <label className="mini-proyect">C# & API DEVELOPER</label>
                                     <label className="big-proyect">Bit Assistant</label>
                                     <label className="modi-description">Bit Assistant es un asistente virtual cuyo objetivo es responder a preguntas básicas y ayudar en la vida cotidiana.</label>
                                     <div className="modi-links">
