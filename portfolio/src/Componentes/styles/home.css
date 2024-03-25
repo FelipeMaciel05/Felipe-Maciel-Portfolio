@@ -313,6 +313,7 @@ header a:hover{
     font-size: 2.25vh;
     margin-bottom: 10vh;
     background-color: #1f242d;
+    border-radius: 1vh;
 }
 .skill-caja-title{
     width: 100%;
@@ -320,7 +321,7 @@ header a:hover{
     display: flex;
     justify-content: center;
     margin-bottom: 5vh;
-    margin-top: 1vh;
+    margin-top: 2vh;
 }
 .skill-items{
     width: 80%;
@@ -328,33 +329,5 @@ header a:hover{
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2vh;
     justify-items: center;
-    align-items: center; 
-}
-.css{
-    width: 7vh;
-    height: 7vh;
-    background-image: url("/public/logo-css.png"); 
-    background-size: cover;
-    object-fit: cover;
-}
-.html{
-    width: 7vh;
-    height: 7vh;
-    background-image: url("/public/htmllogo.png"); 
-    background-size: cover;
-    object-fit: cover;
-}
-.js{
-    width: 7vh;
-    height: 7vh;
-    background-image: url("/public/js-logo.png"); 
-    background-size: cover;
-    object-fit: cover;
-}
-.react{
-    width: 7vh;
-    height: 7vh;
-    background-image: url("/public/logo192.png"); 
-    background-size: cover;
-    object-fit: cover;
+    align-items: center;
 }
